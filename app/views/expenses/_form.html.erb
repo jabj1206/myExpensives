@@ -1,0 +1,50 @@
+<div id="expense-modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title"><%= title %></h4>
+      </div>
+      <%= form_for @expense, remote: true do |f| %>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-6">
+              <h4>Type</h4>
+              <div class="form-group">
+                <%= f.collection_select :type_id, Type.all, :id, :name, {}, class: 'form-control' %>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <h4>Date</h4>
+              <div class="form-group">
+                <%= f.date_field :date, class: "form-control", value: Date.today%>
+              </div>
+            </div>
+            <div class="col-xs-12">
+              <h4>Concept</h4>
+              <div class="form-group">
+                <%= f.text_field :concept, class: "form-control"%>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <h4>Category</h4>
+              <div class="form-group">
+                <%= f.collection_select(:category_id, Category.all, :id, :name,{}, {:class=>'form-control'}) %>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <h4>Amount</h4>
+              <div class="form-group">
+                <%= f.number_field :amount, class: "form-control"%>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <div class="modal-footer text-center ">
+      <%= f.submit class: "btn btn-primary " %>
+    </div>
+  <% end %>
+</div>
+</div>
+</div>
