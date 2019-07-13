@@ -1,5 +1,6 @@
 <% if @expense.errors.empty? %>
   // add the row to the table, show alert and hide modal
+   $('#error').hide();
   $('table tbody').prepend(' <%= j render "row", expense: @expense %>');
   $('#expense-modal').modal('hide');
   $('#total').empty()
@@ -10,6 +11,7 @@
   $('#average').text('<%=number_to_currency(@average)%>')
 <% else %>
   // show first error
+   $('#error').hide();
   $('#error').show();
   var build_error = "<div  id='build_error'>";
   build_error += "The form contains <%= pluralize(@expense.errors.count, 'error') %>.";
