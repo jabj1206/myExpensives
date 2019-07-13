@@ -17,6 +17,5 @@
 //= require highcharts
 //= require Chart.bundle
 //= require chartkick
-//= require rails.validations
 //= require_tree .
 
