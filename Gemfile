@@ -10,7 +10,7 @@ gem 'puma'
 gem "chartkick"
 gem 'highcharts-rails'
 gem 'groupdate'
- gem 'pg'
+gem 'pg', '~> 0.20'
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.6'
