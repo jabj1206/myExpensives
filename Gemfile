@@ -10,7 +10,7 @@ gem 'puma'
 gem "chartkick"
 gem 'highcharts-rails'
 gem 'groupdate'
-
+ gem 'pg'
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.6'
@@ -53,7 +53,7 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
+ 
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
