@@ -22,7 +22,7 @@
       <div class="panel panel-default">
         <div class="panel-heading">Últimos 6 Meses</div>
         <div class="panel-body">
-          <div id="expenses-chart" style="height: 250px;">
+          <div id="expenses-chart" style="height: 300px;">
             <%= column_chart charts_semester_type_path, prefix: "$",thousands: ",",library: {animation: {easing: 'easeOutQuad'}} %>
           </div>
         </div>
@@ -32,7 +32,7 @@
       <div class="panel panel-default">
         <div class="panel-heading">Por Día</div>
         <div class="panel-body">
-          <div id="daily-expenses-chart" style="height: 250px;">
+          <div id="daily-expenses-chart" style="height: 300px;">
           <%= column_chart charts_type_path, prefix: "$",thousands: ",",library: {animation: {easing: 'easeOutQuad'}} %>
           </div>
         </div>
@@ -44,7 +44,7 @@
       <div class="panel panel-default">
         <div class="panel-heading">Por Categoría</div>
         <div class="panel-body">
-          <div id="category-chart" style="height: 250px;">
+          <div id="category-chart" style="height: 300px;">
           <%= pie_chart charts_category_path, prefix: "$",thousands: ",",library: {animation: {easing: 'easeOutQuad'}, elements: {arc: {borderColor: 'rgba(0, 0, 0, 0.2)'}}}%>
           </div>
         </div>
@@ -54,7 +54,7 @@
       <div class="panel panel-default">
         <div class="panel-heading">Acumulado</div>
         <div class="panel-body">
-          <div id="month-acc" style="height: 250px;">
+          <div id="month-acc" style="height: 300px;">
           <%= area_chart charts_accumulated_path, prefix: "$",thousands: ",",library: {animation: {easing: 'easeOutQuad'}}%>
           </div>
         </div>
