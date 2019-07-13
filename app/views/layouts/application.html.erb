@@ -4,14 +4,9 @@
     <title>Expenses</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
-     
-     
-     
   </head>
-
   <body>
     <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
       <div class="container">
@@ -25,7 +20,6 @@
           </button>
           <a class="navbar-brand" href="/">Expensify</a>
         </div>
-
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class="<%= 'active' if @tab == :dashboard %>"><%= link_to "Dashboard", root_path %></li>
@@ -34,17 +28,12 @@
         </div>
       </div>
     </nav>
-
-    <%= yield %>
-
-        <div class="callout" style="display: none;">
-      <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
-      <div class="callout-container">
-        <% flash.each do |key, value| %>
-          <div class="alert alert-<%= key != "success" ? "success" : key %>"><%= value %></div>
-        <% end %>
-        <p></p>
+    <% flash.each do |type, message| %>
+      <div class="alert <%= bootstrap_class_for(type) %> fade in" style="margin-top: -20px;">
+        <button class="close" data-dismiss="alert">×</button>
+        <%= message %>
       </div>
-    </div>
+    <% end %>
+    <%= yield %>
   </body>
 </html>

@@ -1,15 +1,23 @@
 <% if @expense.errors.empty? %>
   // add the row to the table, show alert and hide modal
   $('table tbody').prepend(' <%= j render "row", expense: @expense %>');
-  $('.alert-success').html("El producto ha sido creado con éxito").show();
   $('#expense-modal').modal('hide');
   $('#total').empty()
   $('#total').text('<%=number_to_currency(@total)%>')
-    $('#transactions').empty()
+  $('#transactions').empty()
   $('#transactions').text('<%=@transactions%>')
-    $('#average').empty()
+  $('#average').empty()
   $('#average').text('<%=number_to_currency(@average)%>')
 <% else %>
   // show first error
-  alert('<%= @expense.errors.full_messages[0] %>');
+  $('#error').show();
+  var build_error = "<div  id='build_error'>";
+  build_error += "The form contains <%= pluralize(@expense.errors.count, 'error') %>.";
+  build_error +=   "<ul id='error_explanation'>";
+    <% @expense.errors.full_messages.each do |msg| %>
+      build_error += "<li><%= j msg %></li>";
+      <% end %>
+      build_error +=   "</ul>";
+    build_error += "</div>";
+  $(build_error).insertAfter( ".container-error" );
 <% end %>

@@ -11,6 +11,7 @@ gem 'fusioncharts-rails'
 gem "chartkick"
 gem 'highcharts-rails'
 gem 'groupdate'
+gem 'client_side_validations'
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.6'
