@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: {format: 'json'} do
     namespace :v1 do
-      resources :expenses, only: [:index, :create, :update, :destroy]
+      resources :expenses, only: [:show, :index, :create, :update, :destroy]
     end
   end
 

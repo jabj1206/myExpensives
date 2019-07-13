@@ -5,7 +5,12 @@ module Api
       def index
         @expenses = Expense.all
         render json: @expenses
-        end
+    end
+
+    def show
+        @expense = Expense.find(params[:id])
+        render json: @expense
+    end
 
       def new
         @expense = Expense.new
