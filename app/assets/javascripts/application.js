@@ -19,3 +19,10 @@
 //= require chartkick
 //= require_tree .
 
+
+
+$(document).ready(function() {
+    $("#alert-container").fadeTo(2000, 500).slideUp(500, function() {
+      $("#alert-container").slideUp(500);
+    });
+});
