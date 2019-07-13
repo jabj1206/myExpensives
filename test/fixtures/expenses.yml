@@ -15,15 +15,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  type: 
-  concept: MyString
-  category: MyString
-  amount: 1
-  date: 2019-07-08
+  date: 2018-09-24
+  concept: Test1
+  amount: 10
+  category: one
+  type: one
 
 two:
-  type: 
-  concept: MyString
-  category: MyString
-  amount: 1
-  date: 2019-07-08
+  date: 2018-02-24
+  concept: Test2
+  amount: 2
+  category: two
+  type: two

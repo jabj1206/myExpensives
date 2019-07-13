@@ -35,13 +35,20 @@ gem 'jbuilder', '~> 2.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+group :test do
+  gem 'minitest-rails-capybara'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
+  gem "minitest-rails"
+  gem 'minitest-reporters'
+  gem "rspec"
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'sqlite3'
-  gem 'minitest-rails-capybara'
-end
+  gem 'minitest-rails-capybara'end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
