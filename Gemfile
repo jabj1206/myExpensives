@@ -7,11 +7,10 @@ gem 'rails', '>= 5.0.0.beta3', '< 5.1'
 
 # Use Puma as the app server
 gem 'puma'
-gem 'fusioncharts-rails'
 gem "chartkick"
 gem 'highcharts-rails'
 gem 'groupdate'
-gem 'client_side_validations'
+
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.6'
