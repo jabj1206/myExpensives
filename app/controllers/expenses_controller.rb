@@ -56,7 +56,7 @@ end
     @average = @total / Expense.all.count
     @transactions = Expense.all.count
     if @expense.save
-      redirect_to expenses_path, notice: 'The expense was create sucesfully'
+      redirect_to expenses_path, notice: 'The expense was successfully create'
     end
   end
 
@@ -67,13 +67,13 @@ end
   def destroy
     expense = Expense.find(params[:id])
     expense.destroy
-    redirect_to expenses_path, notice: 'The expense was eliminated sucesfully'
+    redirect_to expenses_path, notice: 'The expense was successfully eliminated'
   end
 
   def update
     @expense = Expense.find(params[:id])
     if @expense.update(expense_params)
-      redirect_to expenses_path, notice: 'The expense was modified sucesfully'
+      redirect_to expenses_path, notice: 'The expense was successfully modified'
     end
   end
 
